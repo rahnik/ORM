@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $books = DB::table('books')->get();
-    return view('welcome',['books' => $books]);
+    $books = App\Book::where('language', 'Swahili')->get();
+    //$books = DB::table('books')->where('language', 'Swahili')->get();
+    return view('welcome', ['books'=>$books]);
+    //return view('welcome',['books' => $books]);
 });
