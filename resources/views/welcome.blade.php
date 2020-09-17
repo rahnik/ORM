@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Raamatukogu</title>
+
 </head>
 <body class="p-12">
     <table class="w-full table-auto">
         <thead class="font-bold">
             <tr>
-                <td class="px-4 py-2">Pealkiri</td>
+                <td class="px-4 py-2"><a href="?sort=title">Pealkiri</a></td>
                 <td class="px-4 py-2">Autor</td>
-                <td class="px-4 py-2">Aasta</td>
-                <td class="px-4 py-2">Lehekülg</td>
-                <td class="px-4 py-2">Hind</td>
-                <td class="px-4 py-2">Laoseis</td>
-                <td class="px-4 py-2">Tüüp</td>
+                <td class="px-4 py-2"><a href="?sort=release_date">Aasta</a></td>
+                <td class="px-4 py-2"><a href="?sort=pages">Lehekülg</a></td>
+                <td class="px-4 py-2"><a href="?sort=price">Hind</a></td>
+                <td class="px-4 py-2"><a href="?sort=stock_saldo">Laoseis</a></td>
+                <td class="px-4 py-2"><a href="?sort=type">Tüüp</a></td>
             </tr>
         </thead>
         <tbody class="text-sm">
@@ -33,6 +34,6 @@
             @endforeach
         </tbody>
     </table>
-
+    {{ $books->links() }}
 </body>
 </html>
