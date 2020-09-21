@@ -11,13 +11,13 @@
     <table class="w-full table-auto">
         <thead class="font-bold">
             <tr>
-                <td class="px-4 py-2"><a href="?sort=title">Pealkiri</a></td>
+                <td class="px-4 py-2"><a href="?sort=title&order={{ $order }}">Pealkiri</a></td>
                 <td class="px-4 py-2">Autor</td>
-                <td class="px-4 py-2"><a href="?sort=release_date">Aasta</a></td>
-                <td class="px-4 py-2"><a href="?sort=pages">Lehekülg</a></td>
-                <td class="px-4 py-2"><a href="?sort=price">Hind</a></td>
-                <td class="px-4 py-2"><a href="?sort=stock_saldo">Laoseis</a></td>
-                <td class="px-4 py-2"><a href="?sort=type">Tüüp</a></td>
+                <td class="px-4 py-2"><a href="?sort=release_date&order={{ $order }}">Aasta</a></td>
+                <td class="px-4 py-2"><a href="?sort=pages&order={{ $order }}">Lehekülg</a></td>
+                <td class="px-4 py-2"><a href="?sort=price&order={{ $order }}">Hind</a></td>
+                <td class="px-4 py-2"><a href="?sort=stock_saldo&order={{ $order }}">Laoseis</a></td>
+                <td class="px-4 py-2"><a href="?sort=type&order={{ $order }}">Tüüp</a></td>
             </tr>
         </thead>
         <tbody class="text-sm">

@@ -10,12 +10,12 @@ class BookController extends Controller
 {
     public function index()
     {
+        $order = request('order') == 'asc' ? 'desc' : 'asc';
+        $books = Book::query();
         if (request()->has('sort')) {
-            $books= Book::orderBy(request()->query('sort'))->paginate(20);
-        } else {
-            $books= Book::paginate(20);
+            $books->orderBy(request()->query('sort'), $order);
         }
-        return view('welcome', ['books'=>$books]);
+        return view('welcome', ['books'=>$books->paginate(20), 'order' => $order]);
     }
 
 }
