@@ -7,7 +7,14 @@
     <title>Raamatukogu</title>
 
 </head>
-<body class="p-12">
+<body>
+    <nav class="bg-indigo-300 py-4 px-12 flex justify-center items-center shadow-lg">
+        <a href="/orders" class="mx-2 text-indigo-800 font-bold hover:text-gray-200">Tellimused</a>
+        <a href="" class="mx-2 text-indigo-800 font-bold hover:text-gray-200">Kliendid</a>
+        <a href="/books" class="mx-2 text-indigo-800 font-bold hover:text-gray-200">Raamatud</a>
+        <a href="" class="mx-2 text-indigo-800 font-bold hover:text-gray-200">Autorid</a>
+    </nav>
+<div class="p-12">
     <table class="w-full table-auto">
         <thead class="font-bold">
             <tr>
@@ -34,6 +41,7 @@
             @endforeach
         </tbody>
     </table>
+</div>
     <div class="mt-4">
         {{ $books->withQueryString()->links() }}
     </div>
